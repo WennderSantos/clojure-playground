@@ -18,7 +18,14 @@
   (testing "Merge array"
     (is (= (merge-array [1 2 3] [4 5 6]) [1 2 3 4 5 6]))))
 
-(deftest should-return-a-sorted-array
-  (testing "Sorted array"
-    (is (= (selection-sort [2 5 3 8]) [2 3 5 8]))
-    (is (= (selection-sort [2 5 2 3 8 5]) [2 2 3 5 5 8]))))
+(deftest sort-array
+  (testing "Should return a sorted array"
+    (testing "when array contains unsorted items"
+      (is (= (selection-sort [2 5 3 8]) [2 3 5 8])))
+    (testing "when array contains sorted items"
+      (is (= (selection-sort [1 2 3]) [1 2 3]))))
+  (testing "Should return a sorted array with consecutive repeated items"
+    (testing "when array contains repeated items"
+      (is (= (selection-sort [2 5 2 3 5 8]) [2 2 3 5 5 8])))))
+
+
