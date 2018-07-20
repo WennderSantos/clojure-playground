@@ -7,7 +7,7 @@
     (is (= "found" (linear-search [1 5 4] 5)))))
 
 (deftest should-not-find
-  (testing "Should found"
+  (testing "Not found"
     (is (= "not found" (linear-search [1 5 4] 7)))))
 
 
