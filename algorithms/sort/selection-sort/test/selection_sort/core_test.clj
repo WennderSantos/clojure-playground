@@ -12,7 +12,7 @@
 
 (deftest should-delete-min-value-from-array
   (testing "Delete min value from array"
-    (is (= (remove-min-val [3 2 9 8]) [3 9 8])))) 
+    (is (= (remove-min-val [3 2 9 8] 2) [3 9 8])))) 
 
 (deftest should-merge-two-arrays
   (testing "Merge array"
